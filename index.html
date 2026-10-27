@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бондарев Никита — Волонтёр</title>
+    <link rel="stylesheet" href="./css/lab5.css">
+</head>
+<body>
+    <header>
+        <button type="button" id="themeToggle" class="theme-toggle" aria-label="Переключить тему">
+            🌙 Тёмная тема
+        </button>
+
+        <h1>Бондарев Никита</h1>
+        <p class="subtitle">Волонтёр, социальный активист и просто хороший человек</p>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about" title="Перейти к разделу: О себе">О себе</a></li>
+                <li><a href="#skills" title="Перейти к разделу: Навыки">Навыки</a></li>
+                <li><a href="#projects" title="Перейти к разделу: Проекты">Проекты</a></li>
+                <li><a href="#campaigns" title="Перейти к разделу: Текущие акции">Текущие акции</a></li>
+                <li><a href="#roles" title="Перейти к разделу: Роли в команде">Роли в команде</a></li>
+                <li><a href="#contacts" title="Перейти к разделу: Контакты">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>О себе</h2>
+            <div class="img_container">
+                <img src="./images/myPhoto.jpg" alt="Фото Бондарева Никиты">
+            </div>
+            <p>Меня зовут Никита, и я уже более трёх лет занимаюсь волонтёрской деятельностью.
+               Помогаю пожилым людям, организую экологические акции и инклюзивные мероприятия для детей.
+               Верю, что каждый человек способен сделать мир вокруг себя лучше — нужно лишь сделать первый шаг.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Навыки</h2>
+            <ul>
+                <li>Координация волонтёрских групп и распределение задач</li>
+                <li>Фандрайзинг и организация сбора средств</li>
+                <li>Взаимодействие с НКО и государственными социальными учреждениями</li>
+                <li>Организация благотворительных мероприятий и акций</li>
+                <li>Публичные выступления и работа со СМИ</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Проекты</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>«Тепло сердец»</h3>
+                    <p>Регулярные выезды в дома престарелых для помощи пожилым людям и организации досуга.</p>
+                </div>
+                <div class="card">
+                    <h3>«Зелёный город»</h3>
+                    <p>Координация экологических субботников и массовая высадка деревьев в городских парках.</p>
+                </div>
+                <div class="card">
+                    <h3>«Подари книгу»</h3>
+                    <p>Всероссийская акция по сбору литературы для пополнения фондов сельских библиотек.</p>
+                </div>
+                <div class="card">
+                    <h3>«Равные возможности»</h3>
+                    <p>Организация инклюзивных спортивных турниров для детей с ограниченными возможностями здоровья.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="campaigns">
+            <h2>Текущие акции</h2>
+            <div class="campaigns-actions">
+                <button type="button" id="hideCampaignsBtn">Скрыть акции</button>
+                <button type="button" id="addCampaignBtn">+ Добавить акцию</button>
+            </div>
+
+            <div class="cards-container" id="campaignsContainer">
+                <div class="card" data-id="existing-0">
+                    <h3>«Тепло сердец»</h3>
+                    <time class="date" datetime="2026-10-15">15 октября 2026</time>
+                    <p class="role">Роль: Координатор волонтёров</p>
+                    <p>Помощь в организации досуга и бытовая поддержка пожилых людей в пансионате.</p>
+                    <div class="card-actions">
+                        <button type="button" class="participate-btn">Участвовал</button>
+                    </div>
+                </div>
+                <div class="card" data-id="existing-1">
+                    <h3>«Зелёный город»</h3>
+                    <time class="date" datetime="2026-10-22">22 октября 2026</time>
+                    <p class="role">Роль: Организатор</p>
+                    <p>Распределение инвентаря, координация зон высадки деревьев и работа с прессой.</p>
+                    <div class="card-actions">
+                        <button type="button" class="participate-btn">Участвовал</button>
+                    </div>
+                </div>
+                <div class="card" data-id="existing-2">
+                    <h3>«Подари книгу»</h3>
+                    <time class="date" datetime="2026-11-05">5 ноября 2026</time>
+                    <p class="role">Роль: Фандрайзер</p>
+                    <p>Привлечение спонсоров, организация пунктов сбора литературы и логистика.</p>
+                    <div class="card-actions">
+                        <button type="button" class="participate-btn">Участвовал</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roles">
+            <h2>Роли в команде</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <div class="icon">🤝</div>
+                    <h3>Лидер группы</h3>
+                    <p>Мотивация команды, распределение задач, контроль сроков и разрешение конфликтов.</p>
+                </div>
+                <div class="grid-item">
+                    <div class="icon">📢</div>
+                    <h3>Спикер / PR</h3>
+                    <p>Взаимодействие со СМИ, ведение социальных сетей, публичные выступления на мероприятиях.</p>
+                </div>
+                <div class="grid-item">
+                    <div class="icon">📊</div>
+                    <h3>Аналитик</h3>
+                    <p>Оценка эффективности акций, подсчёт собранной помощи, подготовка отчётов для партнёров.</p>
+                </div>
+            </div>
+        </section>
+
+        <aside>
+            <h2>Социальная проблема</h2>
+            <p>Меня глубоко волнует проблема одиночества пожилых людей. В современном мире разрыв между поколениями увеличивается, и многие старики остаются один на один со своими проблемами.</p>
+        </aside>
+
+        <section id="contacts">
+            <h2>Контакты</h2>
+            <form id="contactForm" action="#" method="post">
+                <label for="userName">Ваше имя</label>
+                <input type="text" id="userName" name="userName" placeholder="Введите имя" required>
+
+                <label for="userEmail">Email</label>
+                <input type="email" id="userEmail" name="userEmail" placeholder="example@mail.ru" required>
+
+                <label for="userMessage">Сообщение</label>
+                <textarea id="userMessage" name="userMessage" rows="5" placeholder="Напишите сообщение" required></textarea>
+
+                <button type="submit" class="submit-btn">отправить сообщение</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="copyright">
+        <p>© 2026 Бондарев Никита. Все права защищены</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

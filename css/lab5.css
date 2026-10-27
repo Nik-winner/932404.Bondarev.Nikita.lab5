@@ -1,0 +1,534 @@
+:root {
+    --color-main: #FFFFFF;
+    --color-accent: #C62828;
+    --color-text: #212121;
+    --color-bg: #F9F9F9;
+    --font-size: 1rem;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'Georgia', serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+section ul, section ol {
+    padding-left: 20px;
+}
+
+section ul li, section ol li {
+    margin-bottom: 8px;
+}
+
+main {
+    position: static;
+    padding: 20px;
+    background-color: var(--color-main);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 3px solid var(--color-accent);
+    background-color: var(--color-main);
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    margin: 0;
+}
+
+header .subtitle {
+    color: var(--color-text);
+    margin: 5px 0 20px;
+    font-size: 1.1em;
+}
+
+header::before {
+    content: "★";
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: var(--color-accent);
+    font-size: 24px;
+}
+
+.img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-accent);
+    max-width: 20vw;
+    height: auto;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.nav-list li a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+    background-color: var(--color-accent);
+    color: var(--color-main);
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    background: var(--color-main);
+    border: 1px solid #eee;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+section > h2:first-child {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 300px;
+    background: #FAFAFA;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: var(--color-accent);
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.card .date {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.card .role {
+    font-weight: bold;
+    color: var(--color-text);
+    margin: 10px 0;
+    padding: 5px 10px;
+    background: #FFF5F5;
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+    display: inline-block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background: #FFF5F5;
+    border: 1px solid #ffe0e0;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.grid-item:hover {
+    background: #ffeaea;
+}
+
+.grid-item .icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-main);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    color: var(--color-accent);
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.grid-item:hover .icon {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+.grid-item h3 {
+    color: var(--color-accent);
+    margin: 0 0 10px 0;
+}
+
+.grid-item p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+aside {
+    background-color: #FFF5F5;
+    border-left: 5px solid var(--color-accent);
+    padding: 20px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 20px;
+}
+
+aside h2 {
+    font-weight: bold;
+    color: var(--color-accent);
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #8E0000;
+}
+
+#contacts {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--color-text);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: var(--font-size);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 8px rgba(198, 40, 40, 0.3);
+}
+
+.submit-btn {
+    position: relative;
+    background-color: var(--color-main);
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    padding: 14px 28px;
+    font-size: var(--font-size);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: all 0.3s ease;
+    overflow: visible;
+    margin-top: auto;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-main);
+}
+
+.submit-btn:active {
+    transform: translateY(3px);
+}
+
+@keyframes pulse-heart {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.submit-btn::after {
+    content: "❤";
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    font-size: 22px;
+    color: var(--color-accent);
+    animation: pulse-heart 1.5s infinite ease-in-out;
+    pointer-events: none;
+}
+
+#copyright {
+    margin-right: 3px;
+    margin-top: 17px;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    img {
+        max-width: 40vw;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 15px;
+    }
+    header::before {
+        display: none;
+    }
+    .nav-list {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .nav-list li a {
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        padding: 6px 12px;
+        font-size: 0.95em;
+    }
+    main {
+        padding: 10px;
+        margin: 10px;
+        border-radius: 0;
+    }
+    section {
+        padding: 15px;
+    }
+    .cards-container {
+        flex-direction: column;
+    }
+    .card {
+        flex: 1 1 100%;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    .grid-item .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    #contacts {
+        min-height: auto;
+    }
+    img {
+        max-width: 30vw;
+    }
+    .theme-toggle {
+        position: static;
+        display: block;
+        margin: 0 auto 15px;
+    }
+    
+    .campaigns-actions {
+        flex-direction: column;
+    }
+    
+    .campaigns-actions button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    .submit-btn::after {
+        top: -8px;
+        right: -8px;
+        font-size: 18px;
+    }
+    img {
+        max-width: 40vw;
+    }
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-main);
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s;
+    z-index: 10;
+}
+
+.theme-toggle:hover {
+    background: var(--color-accent);
+    color: var(--color-main);
+}
+
+.campaigns-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.campaigns-actions button {
+    background: var(--color-main);
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.campaigns-actions button:hover {
+    background: var(--color-accent);
+    color: var(--color-main);
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.participate-btn,
+.delete-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid var(--color-accent);
+    background: var(--color-main);
+    color: var(--color-accent);
+    cursor: pointer;
+    font-size: .9em;
+    transition: all .3s;
+}
+
+.participate-btn.participated {
+    background: var(--color-accent);
+    color: var(--color-main);
+}
+
+.delete-btn:hover {
+    background: #8E0000;
+    color: var(--color-main);
+    border-color: #8E0000;
+}
+
+body.theme-dark {
+    --color-main: #1E1E1E;
+    --color-text: #EAEAEA;
+    --color-bg: #121212;
+    --color-accent: #FF5252;
+}
+
+body.theme-dark section,
+body.theme-dark header,
+body.theme-dark main {
+    background-color: var(--color-main);
+    border-color: #333;
+}
+
+body.theme-dark .card,
+body.theme-dark .grid-item,
+body.theme-dark aside {
+    background: #2A2A2A;
+    border-color: #3A3A3A;
+}
+
+body.theme-dark input,
+body.theme-dark textarea {
+    background: #2A2A2A;
+    color: var(--color-text);
+    border-color: #444;
+}
+
+body.theme-dark .card .role {
+    background: #3A2020;
+}
